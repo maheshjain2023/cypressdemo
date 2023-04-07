@@ -12,7 +12,7 @@ class Login
     {
        cy.get(this.txtPassword).type(Password)
     }
-    ClickSubmit()
+    ClickSubmit() //checking for submit
     {
         cy.get(this.btnSubmit).click()
     } 
