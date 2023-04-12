@@ -8,5 +8,9 @@ describe('Locators', () => {
     cy.get('[type="submit"]').click()
     
   
+    cy.get('[name="username"]').type("Admin1")
+    cy.get('[name="password"]').type("admion1234")
+    cy.get('[type="submit"]').click()
+    
     })
   })
