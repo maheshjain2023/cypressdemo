@@ -24,6 +24,7 @@ describe('Check UI elements', () => {
         cy.get('[name="continents"]').select('Australia')
         cy.get('[name="selenium_commands"]').select('Switch Commands')
         cy.get('[name="submit"]').click()
+
   
     })
   })
