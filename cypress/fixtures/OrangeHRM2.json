@@ -7,11 +7,11 @@
 {
     "username":"xyz",
     "password":"admin123",
-    "expected":"Invalid Credentials"
+    "expected":"Invalid credentials"
 },
 {
     "username":"Admin",
     "password":"xyz",
-    "expected":"Invalid Credentials"
+    "expected":"Invalid credentials"
 }
 ]

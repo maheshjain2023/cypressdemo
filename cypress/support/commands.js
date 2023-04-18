@@ -35,4 +35,6 @@
     .then(cy.wrap)
  })
 
+ //require('@4tw/cypress-drag-drop')
+ import '@4tw/cypress-drag-drop'
  

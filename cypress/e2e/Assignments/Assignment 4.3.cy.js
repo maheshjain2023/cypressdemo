@@ -1,10 +1,6 @@
-describe('Assignment 4.1',()=>{
-    cy.visit('https://trello.com/en/login')
-    cy.get('[data-analytics-button="loginWithGmailButton"]').click()
-    cy.get('//div[@class="BHzsHc"]').click()
-    cy.get('#identifierId').type('democypress2023')
-    cy.get('.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.qIypjc.TrZEUc.lw1w4b').click()
-    cy.get('[name="password"]').type('Josh@2023')
-    cy.get('.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.qIypjc.TrZEUc.lw1w4b').click()
-    cy.get('')
+describe('Assignment 4.3',()=>{
+    it('Drag and Drop',function(){
+    cy.visit('https://demoqa.com/droppable')
+    cy.get('#draggable').drag('#simpleDropContainer > #droppable',{force:true})
+})
 })
