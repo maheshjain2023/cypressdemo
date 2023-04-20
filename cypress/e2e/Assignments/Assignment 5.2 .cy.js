@@ -1,5 +1,5 @@
 describe('Window Handling And Iframes',()=>{
-  it.only('Tab Handling',()=>{
+  it('Tab Handling',()=>{
 
   cy.visit('https://www.globalsqa.com/demo-site/frames-and-windows')  //Parent Tab
   
@@ -12,6 +12,16 @@ describe('Window Handling And Iframes',()=>{
 
    cy.go('back')   //Go back to parent tab
   })
-it('')
+it.only('Handling Iframes',()=>{
+
+  cy.visit('https://www.globalsqa.com/demo-site/frames-and-windows')
+
+  const iframe = cy.get('#iFrame')
+  .its('0.contentDocument.body')
+  .should(be.visible)
+  .then(cy.wrap)
+  cy.get('//div[@class="logo_img"]').eq(2).should('have.text','GlobalSQA')
+
+})
 
 })

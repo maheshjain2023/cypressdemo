@@ -6,7 +6,7 @@ module.exports = defineConfig({
   //   baseUrl: 'https://intranet.joshsoftware.com/',
    
   // },
-
+  reporter: 'cypress-mochawesome-reporter',//for HTML reports
   e2e: {
     baseUrl: 'https://intranet.joshsoftware.com/',
     chromeWebSecurity: false,
@@ -17,7 +17,7 @@ module.exports = defineConfig({
     //baseUrl: "https://intranet.joshsoftware.com/",
     setupNodeEvents(on, config) {
       // implement node event listeners here
-
+      require('cypress-mochawesome-reporter/plugin')(on);//for HTML reports
 
     },
   },

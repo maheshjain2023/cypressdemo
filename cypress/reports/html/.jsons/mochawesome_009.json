@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-19T06:47:59.924Z",
+    "end": "2023-04-19T06:48:10.719Z",
+    "duration": 10795,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a1e630e8-8986-4d02-b87e-5b4b51621018",
+      "title": "",
+      "fullFile": "cypress/e2e/Assignments/Assignment1.1.cy.js",
+      "file": "cypress/e2e/Assignments/Assignment1.1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42cad85e-85da-49aa-a683-e1eb779b21ab",
+          "title": "Locators",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Sign in to Josh Intranet application",
+              "fullTitle": "Locators Sign in to Josh Intranet application",
+              "timedOut": null,
+              "duration": 10742,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"/Assignment1.1.cy.js/Locators -- Sign in to Josh Intranet application (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.visit('/');\ncy.get('[role=\"menuitem\"]').invoke('attr', 'target', '_self');\ncy.wait(2000);\ncy.get('[role=\"menuitem\"]').click({\n  force: true\n});\ncy.origin(\"https://accounts.google.com/\", () => {\n  cy.get(\"#identifierId\").type(\"mahesh.yambal@joshsoftware.com\");\n  cy.get('.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-k8QpJ.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.nCP5yc.AjY5Oe.DuMIQc.LQeN7.qIypjc.TrZEUc.lw1w4b').click();\n  cy.get('#password').type('Josh@2023');\n  cy.contains('Next').click();\n  // cy.get('.dropdown-toggle.user-name').click()\n  //     cy.get('.test').trigger('mouseover')\n  //     cy.get('.menu-font').click()\n  //     cy.get('.icon-plus.add-timesheet-icon').click()\n  //     cy.get('.select.required.active_project_ids').select('Upskill/CrossSkill training')\n  //     cy.get('.select.optional.duration_select').select('8 hours 30 mins')\n  //     cy.get('#user_time_sheets_attributes_0_description').type('cypress Learning')\n  //     cy.get('[type=\"submit\"]').click()\n});\n//     \n// })",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#identifierId`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#identifierId`, but never found it.\n    at Context.eval (webpack:///./cypress/e2e/Assignments/Assignment1.1.cy.js:14:11)",
+                "diff": null
+              },
+              "uuid": "56213344-b66b-4eaf-a93e-7c1b49c8905d",
+              "parentUUID": "42cad85e-85da-49aa-a683-e1eb779b21ab",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "56213344-b66b-4eaf-a93e-7c1b49c8905d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10742,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

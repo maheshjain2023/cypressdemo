@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-19T06:49:07.647Z",
+    "end": "2023-04-19T06:49:25.236Z",
+    "duration": 17589,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e20c43d0-efc5-474a-aa51-1d5b5f46ad09",
+      "title": "",
+      "fullFile": "cypress/e2e/Assignments/Assignment3.1.cy.js",
+      "file": "cypress/e2e/Assignments/Assignment3.1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9863bef-3735-4122-82d6-82eef831e7b1",
+          "title": "Check UI elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Checking Radio Buttons",
+              "fullTitle": "Check UI elements Checking Radio Buttons",
+              "timedOut": null,
+              "duration": 15600,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm');\ncy.xpath('//div[@class=\"nxt-btn\"]').click();\ncy.wait(2000);\ncy.xpath('//div[@class=\"pre-btn\"]').click();\n// cy.get('[id*=how-select]').select('Podcast').should('have.value','Podcast') \ncy.get('[name=\"firstname\"]').type(\"Mahesh\");\ncy.get('[name=\"lastname\"]').type(\"Jain\");\ncy.get('[value=\"Male\"]').check();\ncy.get('[type=\"radio\"]').eq(7).click();\ncy.xpath('//table/tbody/tr[5]/td[2]//input[@type=\"text\"]').type(\"10 April 2023\");\ncy.get('[value=\"Manual Tester\"]').check();\ncy.get('[name=\"photo\"]').selectFile(\"/home/josh/Downloads/cypressdemo/cypress/fixtures/cartoon.jpeg\");\ncy.get('[type=\"checkbox\"]').check(['RC', 'Selenium IDE']);\n// cy.get('[value=\"RC\"]').check()\n// cy.get('[value=\"Selenium IDE\"]').check()\n// cy.get('[value=\"Selenium IDE\"]').uncheck()\ncy.get('[name=\"continents\"]').select('Australia');\ncy.get('[name=\"selenium_commands\"]').select('Switch Commands');\ncy.get('[name=\"submit\"]').click();",
+              "err": {},
+              "uuid": "7136d2c5-5961-4f39-8ea1-8323dfa837f2",
+              "parentUUID": "f9863bef-3735-4122-82d6-82eef831e7b1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7136d2c5-5961-4f39-8ea1-8323dfa837f2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15600,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

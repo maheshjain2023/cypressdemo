@@ -1,0 +1,86 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-19T06:42:56.063Z",
+    "end": "2023-04-19T06:43:03.809Z",
+    "duration": 7746,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96a7e592-116a-4d08-8282-62fd3f16a309",
+      "title": "",
+      "fullFile": "cypress/e2e/Assignments/Assignment 3.2.1.cy.js",
+      "file": "cypress/e2e/Assignments/Assignment 3.2.1.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Multiple",
+          "fullTitle": "Multiple",
+          "timedOut": null,
+          "duration": 3105,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://formstone.it/components/dropdown/demo/');\ncy.get('#demo_multiple-dropdown > .fs-dropdown-options > .fs-scrollbar-content > [data-value=\"6\"]').click();",
+          "err": {},
+          "uuid": "412bb00c-4fe3-4dfb-8e4f-e09eb4821099",
+          "parentUUID": "96a7e592-116a-4d08-8282-62fd3f16a309",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "412bb00c-4fe3-4dfb-8e4f-e09eb4821099"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3105,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

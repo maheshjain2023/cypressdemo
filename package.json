@@ -16,6 +16,7 @@
     "@cypress/xpath": "^2.0.3",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.3.0",
     "mysql": "^2.18.1"
   }
 }
