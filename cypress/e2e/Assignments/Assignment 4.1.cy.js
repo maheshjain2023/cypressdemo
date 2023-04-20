@@ -1,10 +1,13 @@
-describe('Check UI elements', () => {
+//import { Assertion } from "chai"
+
+describe('Assignment 4.1', () => {
     Cypress.on('uncaught:exception', () => false)
 
 
 
-    it('Checking Radio Buttons', () => {
+    it('Assertions', () => {
         cy.visit('https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm')
+      //Implicit Assertions
 
         cy.url().should('include','tutorialspoint')
                 .and('eq','https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm')
@@ -14,6 +17,18 @@ describe('Check UI elements', () => {
                .should('contain','tutorialspoint')
                .should('eq','https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm')
 
+        //Explicit Assertion
+        let ExpName="Webdriver Commands Example"
+    cy.get('#mainContent > :nth-child(7)').then( (x)=> {
+
+      let actName=x.text()
+      //BDD Style
+      expect(actName).to.equal(ExpName)
+
+      //TDD style
+      assert.equal(ExpName,actName)
+
+    } )
 
         cy.get('#mainContent > :nth-child(1)').should('have.text','Selenium - Automation Practice Form')
         cy.get('[name="firstname"]').type("Mahesh")
