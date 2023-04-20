@@ -37,4 +37,31 @@
 
  //require('@4tw/cypress-drag-drop')
  import '@4tw/cypress-drag-drop'
+//import cypressConfig from '../../cypress.config'
  
+ //Custom Command for clicking on the link using label
+
+Cypress.Commands.add('clickLink',(label)=>{
+   cy.get('a').contains(label).click()
+})
+
+//Overwriting contains() function
+// Cypress.Commands.overwrite('contains',(originalFn,subject,filter,text,options = {})=>{
+//    if(typeof text === 'object'){
+//       options = text
+//       text = filter
+//       filter = undefined
+//    }
+//    options.matchcase = false
+//    return originalFn(subject,filter,text,options)
+
+// })
+
+Cypress.Commands.add('login',(Username,Password)=>{
+   
+   cy.get('[name="username"]').type(Username)
+   cy.get('[name="password"]').type(Password)
+   cy.get('[type="submit"]').click()
+   
+
+})
