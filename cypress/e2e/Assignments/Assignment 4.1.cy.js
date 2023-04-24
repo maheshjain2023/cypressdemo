@@ -31,8 +31,8 @@ describe('Assignment 4.1', () => {
     } )
 
         cy.get('#mainContent > :nth-child(1)').should('have.text','Selenium - Automation Practice Form')
-        cy.get('[name="firstname"]').type("Mahesh").should('not.be.null')
-        cy.get('[name="lastname"]').type("Jain").should('not.be.null')
+        cy.get('[name="firstname"]').type("Mahesh").should('have.value','Mahesh')
+        cy.get('[name="lastname"]').type("Jain").should('have.value','Jain')
         cy.get('[value="Male"]').check().should('be.checked')
         cy.get('[type="radio"]').eq(7).click().should('be.checked')
         cy.xpath('//table/tbody/tr[5]/td[2]//input[@type="text"]').type("10 April 2023")
