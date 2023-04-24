@@ -6,8 +6,8 @@ describe('Assignment 4.2',()=>{
         cy.fixture('OrangeHRM2.json').then((data)=>{
             cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
             data.forEach((userdata)=>{
-                cy.get('[name="username"]').type(userdata.username)
-                cy.get('[name="password"]').type(userdata.password)
+                cy.get('[name="username"]').type(userdata.username).should('not.be.null')
+                cy.get('[name="password"]').type(userdata.password).should('not.be.null')
                 cy.get('[type="submit"]').click()
     
                 if(userdata.username=='Admin' && userdata.password=='admin123')
