@@ -16,23 +16,23 @@ describe('Window Handling And Iframes',()=>{
   
     it('Tab Handling Approach 2',()=>{
   
-    cy.visit('https://the-internet.herokuapp.com/windows')  //Parent Tab
+      cy.visit('https://the-internet.herokuapp.com/windows')  //Parent Tab
+      
+      //remove target element so that new page will open in same tab
+        cy.get('a[href="/windows/new"]').then((e)=>{
     
-    //remove target element so that new page will open in same tab
-      cy.get('a[href="/windows/new"]').then((e)=>{
-  
-      let url = e.prop('href')
-  
-      cy.visit(url)
-  
-      cy.url().should('include','https://the-internet.herokuapp.com/windows') 
+        let url = e.prop('href')
     
-      cy.wait(2000)
-  
-      cy.go('back')   //Go back to parent tab
-  
-    })
-  
+        cy.visit(url)
+    
+        cy.url().should('include','https://the-internet.herokuapp.com/windows') 
+      
+        cy.wait(2000)
+    
+        cy.go('back')   //Go back to parent tab
+    
+      })
+    
     })
   
   })
