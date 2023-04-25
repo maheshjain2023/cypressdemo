@@ -1,5 +1,5 @@
 describe('Check UI elements', () => {
-    Cypress.on('uncaught:exception', () => false)
+    // Cypress.on('uncaught:exception', () => false)
 
 
 
