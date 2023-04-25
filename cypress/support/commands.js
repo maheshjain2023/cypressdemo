@@ -1,4 +1,7 @@
+import {AddtoCart} from '../PageObjects/addToCart'
+
 // ***********************************************
+
 // This example commands.js shows you how to
 // create various custom commands and overwrite
 // existing commands.
@@ -64,4 +67,21 @@ Cypress.Commands.add('login',(Username,Password)=>{
    cy.get('[type="submit"]').click()
    
 
+})
+
+const add = new AddtoCart()
+
+Cypress.Commands.add('Purchase',(Text1,colour,Quantity)=>{
+   
+   add.setFilter(Text1)
+   // cy.get('[name="password"]').type(Password)
+   cy.get('.button-in-search').click()
+   cy.get(':nth-child(3) > .thumbnail > :nth-child(1) > img').click()
+   add.setColour(colour)
+   // cy.get('#option350').select(colour)
+   // cy.get('#product_quantity').clear().type(Quantity)
+   add.setQuantity(Quantity)
+   cy.get('.productpagecart').click()
+   cy.get('#cart_checkout1').click()
+   
 })

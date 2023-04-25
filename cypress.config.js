@@ -8,6 +8,9 @@ module.exports = defineConfig({
   // },
   reporter: 'cypress-mochawesome-reporter',//for HTML reports
   e2e: {
+    setupNodeEvents(on, config) {
+      require('cypress-mochawesome-reporter/plugin')(on);
+    },
     baseUrl: 'https://intranet.joshsoftware.com/',
     chromeWebSecurity: false,
     //experimentalModifyObstructiveThirdPartyCode: true,
@@ -15,10 +18,6 @@ module.exports = defineConfig({
     pageLoadTimeout:120000,
     testIsolation: false,
     //baseUrl: "https://intranet.joshsoftware.com/",
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-      require('cypress-mochawesome-reporter/plugin')(on);//for HTML reports
-
-    },
+ 
   },
 });
