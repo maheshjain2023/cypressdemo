@@ -9,7 +9,7 @@
   "author": "mahesh",
   "license": "ISC",
   "dependencies": {
-    "cypress": "12.7"
+    "cypress": "12.10"
   },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.3",
