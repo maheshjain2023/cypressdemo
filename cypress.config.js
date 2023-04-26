@@ -20,13 +20,23 @@ function queryTestDb(query, config) {
 
 module.exports = defineConfig({
 
-  env: {
-   //  baseUrl: 'https://intranet.joshsoftware.com/',
-    db:{
-      host:"",
-      user: "root",
-      password:"josh123",
-      database:"Contactus"
+  // env: {
+  //  //  baseUrl: 'https://intranet.joshsoftware.com/',
+  //   db:{
+  //     host:"https://localhost:3307",
+  //     user: "root",
+  //     password:"example",
+  //     database:"test"
+  //   },
+  "env":{
+    "db": {
+      "host": "127.0.0.1",
+      "user": "root",
+      "password": "example",
+      "database": "test",
+      "port": 3307,
+      //"key": "cypress/pemFiles/testPemFile.pem",
+      //"http": true
     },
     async setupNodeEvents(on, config) {
       // implement node event listeners here

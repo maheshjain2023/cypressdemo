@@ -1,6 +1,6 @@
 describe("",()=>{
     it("test db",()=>{
-        cy.task("queryDb","select * from Contactus").then((res)=>{
+        cy.task("queryDb","select * from employee").then((res)=>{
              cy.log(res)
         })
         //.then(count => {
