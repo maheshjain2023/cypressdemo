@@ -1,14 +1,66 @@
 const { defineConfig } = require("cypress");
+const mysql = require("mysql")
+function queryTestDb(query, config) {
+  // creates a new mysql connection using credentials from cypress.json env's
+  const connection = mysql.createConnection(config.env.db);
+  // start connection to db
+  connection.connect();
+  // exec query + disconnect to db as a Promise
+  return new Promise((resolve, reject) => {
+    connection.query(query, (error, results) => {
+      if (error) reject(error);
+      else {
+        connection.end();
+        // console.log(results)
+        return resolve(results);
+      }
+    });
+  });
+}
 
 module.exports = defineConfig({
 
-  // env: {
-  //   baseUrl: 'https://intranet.joshsoftware.com/',
-   
-  // },
+  env: {
+   //  baseUrl: 'https://intranet.joshsoftware.com/',
+    db:{
+      host:"",
+      user: "root",
+      password:"josh123",
+      database:"Contactus"
+    },
+    async setupNodeEvents(on, config) {
+      // implement node event listeners here
+
+        const bundler = createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        });
+
+        on("file:preprocessor", bundler);
+        await addCucumberPreprocessorPlugin(on, config);
+      
+        on("task", {
+          queryDb: query => {
+            return queryTestDb(query, config);
+          }
+        });
+
+        return config;
+      
+      },
+    
+        
+   },
   reporter: 'cypress-mochawesome-reporter',//for HTML reports
   e2e: {
+    
+    
+    
     setupNodeEvents(on, config) {
+      on("task", {
+        queryDb: query => {
+          return queryTestDb(query, config);
+        }
+      });
       require('cypress-mochawesome-reporter/plugin')(on);
     },
     baseUrl: 'https://intranet.joshsoftware.com/',

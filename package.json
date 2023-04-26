@@ -1,22 +1,33 @@
 {
   "name": "cypressdemo",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --spec cypress/e2e/Assignments/*.js"
   },
   "author": "mahesh",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "12.10"
-  },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.3",
     "@cypress/xpath": "^2.0.3",
+    "cypress": "^12.10.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.3.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "pg": "^8.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maheshyambal/cypressdemo.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/maheshyambal/cypressdemo/issues"
+  },
+  "homepage": "https://github.com/maheshyambal/cypressdemo#readme",
+  "description": "",
+  "dependencies": {
+    "cypress-mysql": "^1.0.0"
   }
 }
