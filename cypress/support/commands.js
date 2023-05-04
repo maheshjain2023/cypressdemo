@@ -85,3 +85,11 @@ Cypress.Commands.add('Purchase',(Text1,colour,Quantity)=>{
    cy.get('#cart_checkout1').click()
    
 })
+Cypress.Commands.add('login',(Email,Password)=>{
+   
+   cy.get('#email').type(Email)
+   cy.get('#password').type(Password)
+   cy.get('[type="submit"]').click()
+   
+
+})
